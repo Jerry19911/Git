@@ -3,7 +3,7 @@
     --color-primary: #6366f1;
     --color-gray: #9397ad; /* 14 min in Lägg till alla färgkoder från figma */
     --color-white: #FFFFFF;
-    
+    --color-border-gray: #e2e5f1;
 
     --container-padding: 1rem;
     --transition-time: all 0.2s;
@@ -202,6 +202,29 @@ footer{
     }
 }
 
+#brands{
+    display: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.brand-box {
+    border: 1px solid var(--color-border-gray);
+    border-radius: 8px;
+    height: 90px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (min-width: 768px){
     .container{
         max-width: 720px
@@ -224,6 +247,16 @@ footer{
         }
     }
 
+    #brands{
+        display: block;
+
+
+    }
+
+    #brand-1, #brand-2{
+        display: none;
+    }
+
 }
 
 
@@ -239,6 +272,10 @@ footer{
 
     }
 
+    .navbar{
+        display: block;
+    }
+
     #auth-signin{
         display: block;
     }
@@ -247,8 +284,8 @@ footer{
         display: none;
     }
 
-    .navbar{
-        display: block;
+    #brand-1, #brand-2{
+        display: flex;
     }
 
 }
