@@ -1,9 +1,26 @@
 :root {
     --color-dark: #0b0f19;
     --color-primary: #6366f1;
-    --color-gray: #9397ad; /* 14 min in Lägg till alla färgkoder från figma */
     --color-white: #FFFFFF;
     --color-border-gray: #e2e5f1;
+    --color-headingdark: #9397ad; 
+    --color-Navigation: #33354D;
+    --color-bodytext: #565973;
+    --color-mutedtext: #9397AD;  /* samma som grey i videon*/
+    --color-inputph: #B4B7C9;
+    --color-formsborder: #D4D7E5;
+    --color-Dividerborder:#E2E5F1;
+    --color-secondary: #EFF2FC;
+    --color-LightBG: #F3F6FF;
+    --color-error: #EF4444;
+    --color-success: #22C55E;
+    --color-warning: #FFBA08;
+    --color-info: #4C82F7;
+    --color-headline: #131022;
+    --color-text: #585C7B;
+
+    
+
 
     --container-padding: 1rem;
     --transition-time: all 0.2s;
@@ -25,7 +42,6 @@ body, section, div, header, footer, main, aside, nav, blockquote, p, span{
     display: grid;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
-        
 }
 
 .container{
@@ -34,9 +50,6 @@ body, section, div, header, footer, main, aside, nav, blockquote, p, span{
     padding-right: var(--container-padding);
     margin-left: auto;
     margin-right: auto;
-    position: relative;
-    display: block; /* Se till att container inte har grid eller flex om det inte behövs */
-    padding: 0; /* Minska padding om det påverkar layouten */
     
 }
 
@@ -73,7 +86,7 @@ a:hover{
     text-decoration: none;    
 }
 .btn-primary:hover{
-    background-color: var(--color-gray);
+    background-color: var(--color-mutedtext);
     color: var(--color-white);
     text-decoration: none;
 }
@@ -128,7 +141,7 @@ a:hover{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color-gray);
+    background-color: var(--color-mutedtext);
     transition: all 0.2s;
 }
 .toggle-switch .slider:before{
@@ -183,87 +196,80 @@ header .container{
     padding-bottom: rem;
 }
 
-#app-promotion {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: #f9fafb;
-}
-
-#app-promotion .container {
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.headline {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-    color: var(--color-dark);
-    margin-bottom: 1rem;
-}
-
-.subtext {
-    font-size: 0.9rem;
-    color: var(--color-gray);
-    line-height: 1.5;
-    margin-bottom: 2rem;
-}
-
-.app-buttons {
+.text-section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-}
-
-.app-store-btn img, 
-.google-play-btn img {
-    width: 130px;
-}
-
-.content-wrapper{
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    gap: 20px;
+    padding: (var--container-padding);
+    }
     
-    display: flex;
-    flex-direction: row; 
-    height: 100vh; 
-    justify-content: space-between; 
+
+    .header{
+        font-weight: 800;
+        font-size: 34px;
+        line-height: 44px;
+        color: var(--color-headline);
+
+    }
+
+    .text-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 366px;
+        margin: 0 auto;
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .text{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        color: var(--color-text)
+    }
+
+    .appbuttons{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 366px;
+        max-height: 50px;
+        border-radius: 5px;
+        margin: 0 auto;
+    }
     
-}
+    .appbuttons  img{
+        width: 100%;
+        height: 100%;
 
-.text-content{
- margin-left: -350px; 
- padding-top: 150px;
+    }
 
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
 
-}
-
-.phonescreen {
-    display: grid;
-    grid-template-areas: "graph visakort";
-    grid-template-columns: 1fr 1fr;
-    position: relative; 
-}
-
-.visacard {
-    z-index: 2; 
-    grid-area: visakort;
-    position: relative; 
-    left: 30%; 
-    top: 15%; 
-}
-
-.graph {
-    z-index: 1; 
-    grid-area: graph;
-    position: relative; 
-    top: 29%;
-    left: 74%;
-    clip-path: inset(0 0 0.9rem 0); 
-}
-
-
-
-
+      .active, .accordion:hover {
+        background-color: #ccc;
+      }
+      
 
 
 
@@ -271,7 +277,7 @@ footer{
     font-size: 14px;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: var(--color-gray);
+    color: var(--color-mutedtext);
     
     .container{
         display: flex;
@@ -327,29 +333,6 @@ footer{
 
     }
 
-    #app-promotion .container {
-        max-width: 400px;
-    }
-
-    .headline {
-        font-size: 1.8rem;
-    }
-
-    .subtext {
-        font-size: 1rem;
-    }
-
-    .app-buttons {
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .app-store-btn img, 
-    .google-play-btn img {
-        width: 150px;
-    }
-    
-
     footer{
     
         .credit{
@@ -395,21 +378,302 @@ footer{
         display: none;
     }
 
-    #app-promotion .container {
-        max-width: 600px;
+    #brand-1, #brand-2{
+        display: flex;
     }
 
-    .headline {
-        font-size: 2.5rem;
+    
+*{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+body, section, div, header, footer, main, aside, nav, blockquote, p, span{
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    padding-left:var(--container-padding);
+    padding-right: var(--container-padding);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+body{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+
+}
+
+a{
+    color: var(--color-primary);
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: var(--color-gray); /* 15 min in i video */
+    text-decoration: underline;
+
+}
+
+
+.btn-primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;    
+}
+.btn-primary:hover{
+    background-color: var(--color-mutedtext);
+    color: var(--color-white);
+    text-decoration: none;
+}
+.btn-primary i{
+    margin-right: 0.5rem;
+}
+
+.btn-mobile{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+}
+
+.btn-toggle-switch{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-toggle-switch .label{
+    display: none;
+}
+
+.toggle-switch{
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+}
+
+.toggle-switch input{
+    opacity: 0;
+}
+
+.toggle-switch input:checked + .slider{
+    background-color: var(--color-primary);
+}
+
+.toggle-switch input:focus + .slider{
+    box-shadow: 0 0 1px var(--color-primary);
+}
+
+.toggle-switch input:checked + .slider::before{
+    transform: translateX(18px);
+    background-color: var(--color-whte);
+}
+
+.toggle-switch .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-mutedtext);
+    transition: all 0.2s;
+}
+.toggle-switch .slider:before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: var(--color-white);
+    transition: all 0.2s;
+}
+.toggle-switch .slider.round{
+    border-radius: 35px;
+}
+
+.toggle-switch .slider.round::before{
+    border-radius: 50%;
+}
+
+.navbar{
+    display: none; /*detta är för att dölja "features"*/
+}
+
+.nav-link{
+    color: var(--color-dark); /*mörkare färg semi bold - 51 min */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.active {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+#auth-signin{
+    display: none;
+}
+
+
+header .container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto auto;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: rem;
+}
+
+
+
+footer{
+    font-size: 14px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--color-mutedtext);
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
     }
 
-    .subtext {
-        font-size: 1.1rem;
+        
+    
+
+    .credit{
+        display: none;
+
+    }
+}
+
+#brands{
+    display: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.brand-box {
+    border: 1px solid var(--color-border-gray);
+    border-radius: 8px;
+    height: 90px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px
+    }
+
+    .btn-toggle-switch .label{
+        display: none;
+    }
+
+    header .container{
+        gap: 3rem;
+
+    }
+
+    footer{
+    
+        .credit{
+            display: block;
+    
+        }
+    }
+
+    #brands{
+        display: block;
+
+
+    }
+
+    .btn-toggle-switch .label {
+        display: block;
+    }
+
+    #brand-1, #brand-2{
+        display: none;
+    }
+
+}
+
+
+@media (min-width: 1440px){
+    .container{
+        max-width: 1320px
+    }
+
+
+    header .container{
+        grid-template-columns: auto 1fr auto auto;
+        gap: 2rem;
+
+    }
+
+    .navbar{
+        display: block;
+    }
+
+    #auth-signin{
+        display: block;
+    }
+
+    .btn-mobile{
+        display: none;
+    }
+
+    .btn-toggle-switch .label {
+        display: block;
     }
 
     #brand-1, #brand-2{
         display: flex;
     }
 
+
+    
+
 }
 
+}
