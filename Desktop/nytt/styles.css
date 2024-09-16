@@ -40,6 +40,29 @@ body{
     font-size: 16px;
 }
 
+.icons {
+    background: rgb(99,102,241);
+    background: linear-gradient(0deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,1) 50%, rgba(217,70,239,1) 100%); 
+    color: transparent; 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    font-size: 36px; 
+    padding: 10px; 
+}
+
+.icon-wrapper {
+    background-color: #f3f4f6; 
+    padding: 12px;
+    border-radius: 12px; 
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+
 .container{
     width: 100%;
     padding-left: var(--container-padding);
@@ -345,6 +368,8 @@ header .container{
 
     }
 
+    
+
     #gridboxes {
         display: flex;
         align-items: flex-start;
@@ -424,22 +449,50 @@ header .container{
 
 #page4{
 
+    padding-top: 10rem;
+
     .container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center; 
         min-height: 100vh; 
         padding: 20px;
     }
     
-
+    .topcontent, .bottomcontent {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
     }
     
-    .imagegraph, .imagesendmoney {
-        max-width: 100%; /* Se till att bilderna skalar rätt */
-        height: auto;
+    .topcontent {
+        display: flex;
+        align-self: flex-start;
     }
+    
+
+
+    .texttop{
+        margin-top: 160px;
+
+    }
+
+
+    .headline .headline2{
+        font-size: 32px;
+        color: var(--color-dark);
+        font-weight: 130;        
+    }
+
+    .text{
+        color: var(--color-gray700);
+
+    }
+     
+    
+
+
 
     .learnmore{
         background-color: var(--color-primary);
@@ -450,6 +503,10 @@ header .container{
         justify-content: center;
         align-items: center;
         text-decoration: none;
+        width: 160px;
+        height: 45px;
+        margin-top: 48px;
+
     }
     
     .learnmore:hover{
@@ -462,6 +519,76 @@ header .container{
         margin-right: 0.5rem;
     }
 
+    
+    .images-top {
+        position: relative;
+        margin-top: 140px;
+        margin-left: 190px; 
+        display: flex;
+        justify-content: flex-start; 
+        
+    }
+    
+    .imagegraph {
+        position: relative; 
+        z-index: 1;
+    }
+    
+    .imagesendmoney {
+        position: relative; 
+        z-index: 2;
+        margin-top: 400px; 
+        margin-left: -210px;
+    }
+
+    .bottomcontent {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center; 
+        width: 100%; 
+        margin-top: 120px; 
+        gap: 20px; 
+    }
+
+    .circlecheck {
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        margin-bottom: 10px; 
+    }
+    
+    .circlecheck i {
+        margin-right: 10px; 
+        color:var(--color-primary);
+    }
+    
+    .circlecheck li {
+        list-style: none; 
+        font-size: 16px; 
+        color: var(--color-gray700); 
+    }
+
+    .imagecontacts{
+        z-index: -1;
+
+    }
+
+    .imagevisa{
+        z-index: 2;
+        margin-left: -420px;
+        margin-top: 50px;
+        
+    }
+    
+    .wallet{
+        display: flex;
+        flex-direction: column;
+
+    }
+    
+    
 
 
-}
+
+} 
